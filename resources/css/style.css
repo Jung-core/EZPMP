@@ -2645,8 +2645,8 @@ video,iframe{position:absolute;width:100%;height:100%;}
   .inner_con p br {display: none;}
   .infobox {flex-direction: column;}  
   .slidebox .card {min-height: 100%;}  
-  .section01 .info_right {padding: 0 6%;}
-  .section02 .info_right {padding-top: 80px;}
+  .section01 .info_right {padding: 0 6%;text-align:center;}
+  .section02 .info_right {padding-top: 80px;}  
 }
 
 @media screen and (max-width:640px) {
