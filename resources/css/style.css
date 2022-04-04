@@ -2497,6 +2497,7 @@ header.background{background:rgba(0,0,0,0.7)}
 #wrap.hub .login-wrap{max-width:620px; padding: 50px 80px 66px;}
 
 /*************** 2022-04-01 *****************/
+#wrap.hub{overflow:hidden;}
 .hub_gnb{margin-left:auto;display:flex;align-items:center;overflow:hidden;}
 .hub_gnb ul{display:flex;}
 .hub_gnb ul li{margin:0 5px;padding:0 13px;transition:all .4s;}
@@ -2603,8 +2604,7 @@ video,iframe{position:absolute;width:100%;height:100%;}
   .slidebox{width:calc(50% + 515px);margin-left:auto;}
   .card_inner:first-child{margin-left:10px;}
 }
-@media screen  and (max-width:1024px) {
-  /* #wrap.hub{overflow:hidden;} */
+@media screen  and (max-width:1024px) {  
   .cardinner{width:50%;}
   .conText span{font-size:52px;}
   .inner_con h3.lfont{font-size:43px;}  
