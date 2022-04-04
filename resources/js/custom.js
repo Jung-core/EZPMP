@@ -182,3 +182,10 @@ $(function() {
 // 	}
 // } 
 // FX();
+/*****ios bounce 막기******/
+$(document).bind(
+  'touchmove',
+  function(e) {
+  e.preventDefault();
+  }
+);

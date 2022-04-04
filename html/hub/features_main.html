@@ -274,26 +274,6 @@
   <!-- //Footer -->
 </div>
 <!-- //wrap -->
-<script>
-	$(document).bind(
-		'touchmove',
-		function(e) {
-		e.preventDefault();
-		}
-	);
-	jQuery(function($) {
-		function heightcard(){
-			var heightArray = $(".cardinner > div").map(function(){ return $(this).height(); }).get();
-			var maxHeight = Math.max.apply( Math, heightArray);
-			$(".cardinner > div").height(maxHeight);
-		}	
-		heightcard();	
-	});
-	window.onload = function() {
-		$('.cardinner').attr('data-aos', 'zoom-in-up');	
-		heightcard();				
-	}	
-	$(window).on('resize',function(){location.reload();});	
-</script>
+
 </body>
 </html>
