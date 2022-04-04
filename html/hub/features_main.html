@@ -186,7 +186,8 @@
 								<div class="con-text">
 									<span>
 										게이미피케이션과 콘텐츠 추천,
-										<br>통합 검색 기능을 활용해서<br>인게지먼트를 극대화!<br>																
+										<br>통합 검색 기능을 활용해서<br>인게지먼트를 극대화!<br>	
+										게이미피케이션과 콘텐츠 추천,	<br>통합 검색 기능을 활용해서															
 									</span>								
 								</div>
 							</div>
@@ -280,6 +281,19 @@
 		e.preventDefault();
 		}
 	);
+	jQuery(function($) {
+		function heightcard(){
+			var heightArray = $(".cardinner > div").map(function(){ return $(this).height(); }).get();
+			var maxHeight = Math.max.apply( Math, heightArray);
+			$(".cardinner > div").height(maxHeight);
+		}	
+		heightcard();	
+	});
+	window.onload = function() {
+		$('.cardinner').attr('data-aos', 'zoom-in-up');	
+		heightcard();				
+	}	
+	$(window).on('resize',function(){location.reload();});	
 </script>
 </body>
 </html>
