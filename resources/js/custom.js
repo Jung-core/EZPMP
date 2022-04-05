@@ -42,7 +42,7 @@ jQuery(function ($) {
     });
   });
 
-  // mobile - header
+  // mobile - header 
   $('.m-gnb-btn').on('click',function(){
     if($(this).hasClass('gnb-open')){
       $('body').removeClass('layer-open');
@@ -62,6 +62,12 @@ jQuery(function ($) {
       });
     }
   });
+  /****2022.04 리사이즈 dim 처리 */
+  $(window).resize(function(){
+		if( window.innerWidth > 990 ){     
+			location.reload();
+		}
+	});
 
   //mobile - aside
   asideOpen($('#mypage-btn'), $('#mpnb'));

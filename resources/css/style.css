@@ -2497,6 +2497,7 @@ header.background{background:rgba(0,0,0,0.7)}
 #wrap.hub .login-wrap{max-width:620px; padding: 50px 80px 66px;}
 
 /*************** 2022-04-01 *****************/
+#wrap.hub header #gnb{flex:none;margin-left:auto;}
 #wrap.hub{overflow:hidden;}
 .hub_gnb{margin-left:auto;display:flex;align-items:center;overflow:hidden;}
 .hub_gnb ul{display:flex;}
@@ -2624,17 +2625,23 @@ video,iframe{position:absolute;width:100%;height:100%;}
   .menu_title{font-size: 30px;} 
 }
 @media screen and (max-width:999.98px) {
+  #wrap.hub header #gnb{width:100%;max-width:100%;padding-right:0px;transform: translateY(-100%);overflow-y: scroll;}
+  #wrap.hub header #gnb.gnb-open{transform: translateY(0%);opacity: 1;height:320px;}
+  #wrap.hub .hub_gnb{flex-direction: column-reverse;padding:0 20px;}
+  #wrap.hub .hub_gnb ul {flex-direction: column;width:100%;}
+  #wrap.hub .hub_gnb ul li{margin-top:10px;}
   #wrap.hub .content-wrap{padding:60px 0 0;}
-  #wrap.hub .container{padding-right:30px; padding-left:30px;}
+  #wrap.hub .container{padding-right:30px; padding-left:30px;} 
   #wrap.hub .ft-bottom .container{padding-bottom:0;} 
 
   /*************** 2022-04-01 *****************/  
-  body#hubcont #wrap.hub .container{padding-left:20px;padding-right:20px;} 
-  header .hd-logo{font-size:12px;}
+  body#hubcont.layer-open{overflow:hidden;}
+  body#hubcont #wrap.hub .container{justify-content:flex-start;padding-left:30px;padding-right:30px;}  
+  #wrap.hub header .container{height:70px;}
   .hub_gnb{overflow:visible;}
   .hub_gnb ul li{margin: 0 3px;padding:0 5px;}
-  .hub_gnb ul li a{padding-right: 25px;line-height:32px;font-size: 13px;}  
-  .hub_gnb>a{margin-left:5px;}
+  .hub_gnb ul li a{padding-right:25px;font-size:18px;}  
+  .hub_gnb>a{margin-left:5px;align-self: flex-start;}
   .hub_gnb>a:hover{transform:translateX(0px);}
   .conText{font-size:22px;}
   .slidebox{width:100%}	
@@ -2707,6 +2714,7 @@ video,iframe{position:absolute;width:100%;height:100%;}
   
 }
 @media screen and (max-width:320px){
+  body#hubcont #wrap.hub .container{padding-left:15px;padding-right:15px;}
   .conText span{font-size:18px;}
-  .menu_title{font-size:16px;}
+  .menu_title{font-size:16px;}  
 }
