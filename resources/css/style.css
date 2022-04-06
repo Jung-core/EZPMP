@@ -2625,8 +2625,8 @@ video,iframe{position:absolute;width:100%;height:100%;}
   .menu_title{font-size: 30px;} 
 }
 @media screen and (max-width:999.98px) {
-  #wrap.hub header #gnb{width:100%;max-width:100%;padding-right:0px;transform: translateY(-100%);overflow-y: scroll;}
-  #wrap.hub header #gnb.gnb-open{transform: translateY(0%);opacity: 1;height:320px;}
+  #wrap.hub header #gnb{width:100%;max-width:100%;height:320px;padding-right:0px;transform: translateY(-100%);overflow-y: scroll;}
+  #wrap.hub header #gnb.gnb-open{transform: translateY(0%);opacity: 1;}
   #wrap.hub .hub_gnb{flex-direction: column-reverse;padding:0 20px;}
   #wrap.hub .hub_gnb ul {flex-direction: column;width:100%;}
   #wrap.hub .hub_gnb ul li{margin-top:10px;}
