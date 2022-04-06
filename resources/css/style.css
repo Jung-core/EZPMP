@@ -2637,6 +2637,7 @@ video,iframe{position:absolute;width:100%;height:100%;}
   /*************** 2022-04-01 *****************/  
   body#hubcont.layer-open{overflow:hidden;}
   body#hubcont #wrap.hub .container{justify-content:flex-start;padding-left:30px;padding-right:30px;}  
+  body#hubcont header .m-gnb-btn>span{font-size:0px;}
   #wrap.hub header .container{height:70px;}
   .hub_gnb{overflow:visible;}
   .hub_gnb ul li{margin: 0 3px;padding:0 5px;}
