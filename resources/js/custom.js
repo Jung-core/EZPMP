@@ -49,16 +49,18 @@ jQuery(function ($) {
       $('.dim').remove(); 
       $(this).removeClass('gnb-open');
       $('#gnb').removeClass('gnb-open');
-
       $("a.dim").off('click');
+      $('.nav_depth2').slideUp(500);
+      $('.hub_gnb>ul>li').removeClass('active')
     } else {
       $('body').addClass('layer-open');
       $(this).before('<a class="dim"></a>');
       $(this).addClass('gnb-open');
       $('#gnb').addClass('gnb-open');
-
+     
       $("a.dim").on('click', function(){
        $('.m-gnb-btn').trigger('click');
+       
       });
     }
   });
@@ -162,10 +164,45 @@ jQuery(function ($) {
   });
   $(".sns-list .close").on('click',function(){
     $('.sns-list').hide();
-  });
+  }); 
+
+  
+  $('.hub_gnb>ul>li').on('mouseenter',function(){
+    $('#wrap.hub header #gnb').addClass('on')
+    $(this).find('.nav_depth2').addClass('on')
+  })
+  $('.hub_gnb>ul>li').on('mouseleave',function(){
+    $('#wrap.hub header #gnb').removeClass('on')
+    $(this).find('.nav_depth2').removeClass('on')
+  })
+
+  // $('.header-menu > ul > li > a').click(function(e){
+	// 	if( window.innerWidth <= 1200 ){
+	// 		e.preventDefault();
+	// 	}
+	// });
+
+  $('.hub_gnb>ul>li>a').click(function(e){
+		if( window.innerWidth <= 1200 ){
+			e.preventDefault();
+		}
+	});
+
+	$('.hub_gnb>ul>li').click(function(){
+		if( window.innerWidth <= 1200 ){
+			if($(this).hasClass('active')){									
+				$(this).find('.nav_depth2').slideUp(500);					
+				$(this).removeClass('active');
+			}else{
+				$('.nav_depth2').slideUp(500);
+				$('.hub_gnb>ul>li').removeClass('active');
+				$(this).find('.nav_depth2').slideDown(500);
+				$(this).addClass('active');
+			}
+		}
+	});
 
 });
-
 
 // 레이어팝업
 function callPop(classId){
@@ -174,6 +211,7 @@ function callPop(classId){
 	bpopup.reposition(0);
 }
 
+/******2022-04******/
 $(function() {	
   AOS.init({
     duration: 1200		
@@ -182,12 +220,7 @@ $(function() {
   //   AOS.refresh();	
   // });
 });
-// function FX() {
-// 	if (matchMedia("screen and (max-width:3000px)").matches) {
-// 		$('.cardinner').attr('data-aos', 'zoom-in-up');
-// 	}
-// } 
-// FX();
+
 /*****ios bounce 막기******/
 $(document).bind(
   'touchmove',
@@ -195,3 +228,5 @@ $(document).bind(
   e.preventDefault();
   }
 );
+
+
