@@ -159,13 +159,22 @@ jQuery(function ($) {
     $('.sns-list').hide();
   }); 
 
+  // 레이어팝업
+  function callPop(classId){
+    // $(classId).bPopup();
+    var bpopup = $(classId).bPopup();
+    bpopup.reposition(0);
+  }
+
   /****2022.04 추가 스크립트 */
  
  //리사이즈 dim 처리 
   $(window).resize(function(){
 		if( window.innerWidth > 990 ){     
 			location.reload();
-		}
+		}else{
+      location.reload();
+    }
 	});
 
   //pc 2depth menu
@@ -201,12 +210,7 @@ jQuery(function ($) {
 
 });
 
-// 레이어팝업
-function callPop(classId){
-	// $(classId).bPopup();
-  var bpopup = $(classId).bPopup();
-	bpopup.reposition(0);
-}
+
 
 /******2022-04******/
 $(function() {	
