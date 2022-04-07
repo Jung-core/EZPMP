@@ -180,7 +180,7 @@ jQuery(function ($) {
 
   //mobile 2depth menu
   $('.hub_gnb>ul>li>a').click(function(e){
-		if( window.innerWidth <= 1200 ){
+		if( window.innerWidth <= 900 ){
 			e.preventDefault();
 		}
 	});
