@@ -2658,6 +2658,8 @@ video,iframe{position:absolute;width:100%;height:100%;}
   .hub_gnb>a{margin-left:5px;align-self: flex-start;}
   .hub_gnb>a:hover{transform:translateX(0px);}
   .hub_gnb>ul>li:hover>a{background:transparent;}
+  .nav_depth2.on{opacity:0;display:none;}
+  .hub_gnb>ul>li.active .nav_depth2.on{opacity:1}
   .nav_depth2{display:none;background:transparent;border:none;padding-left:20px;}
   .nav_depth2 li a{opacity:.85;}
   .conText{font-size:22px;}
